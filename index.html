@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                window.location.href = "game.html";
+            }, 5000); // Redirect after 5 seconds
+        });
+    </script>
 </head>
 <body>
     <div class="background-overlay"></div>
@@ -12,7 +19,7 @@
             بسم الله الرحمن الرحيم
         </div>
         <div class="message">
-            🌟 Menuju Dunia Petualangan... 🎮
+            🌟 Selamat Datang! Bersiap untuk petualangan... 🎮
         </div>
         <div class="animation-container">
             <div class="crescent"></div>
@@ -22,7 +29,6 @@
     <div class="rain-container"></div>
 
     <script>
-        // Auto-create rain animation
         function createRain() {
             const rainContainer = document.querySelector(".rain-container");
             for (let i = 0; i < 50; i++) {
@@ -34,12 +40,7 @@
                 rainContainer.appendChild(drop);
             }
         }
-        createRain();
-
-        // Auto redirect after 5 seconds
-        setTimeout(function() {
-            window.location.href = "game.html";
-        }, 5000);
+        document.addEventListener("DOMContentLoaded", createRain);
     </script>
 </body>
 </html>
